@@ -1,0 +1,4 @@
+{
+    // intellesense automatically tries to read the files as typescript - this file makes it read as javascript
+    "exclude": ["node_modules"]
+}

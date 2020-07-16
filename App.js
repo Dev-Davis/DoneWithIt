@@ -1,16 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button, SafeAreaView, Text, Image } from 'react-native';
 
 export default function App() {
-  console.log("App executed");
-  let x =1;
+  console.log(require("./assets/icon.png"));
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Hello, I'm Sean and I'm working on a mobile app!</Text>
-      <Text>Mike Sparkman!!!!!</Text>
+      <Image source={require('./assets/icon.png')} />
+      <Image 
+      blurRadius={3}
+      source={{ 
+        width: 200,
+        height: 200,
+        uri: "https://picsum.photos/id/237/200/300" }} 
+        />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
