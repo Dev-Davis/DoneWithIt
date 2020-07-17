@@ -1,21 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Button, SafeAreaView, Text, Image } from 'react-native';
+import { 
+  StyleSheet, 
+  SafeAreaView, 
+  Alert,
+  Button
+} from 'react-native';
 
 export default function App() {
-  console.log(require("./assets/icon.png"));
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello, I'm Sean and I'm working on a mobile app!</Text>
-      <Image source={require('./assets/icon.png')} />
-      <Image 
-      blurRadius={3}
-      source={{ 
-        width: 200,
-        height: 200,
-        uri: "https://picsum.photos/id/237/200/300" }} 
-        />
-      <StatusBar style="auto" />
+      <Button 
+        color="orange"
+        title="Click Me"
+        onPress={() => Alert.alert("My title", "My Message", [
+          { text: "Yes", onPress: () => console.log("you pressed yes") }, 
+          { text: "No", onPress: () => console.log("you pressed no") }
+        ])}
+      />
+      <Button 
+        color="blue"
+        title="Click Me"
+          onPress={() => 
+          Alert.prompt("My title", "My Message", text => console.log(text))  
+        }
+      />
     </SafeAreaView>
   );
 }
