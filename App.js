@@ -6,19 +6,21 @@ export default function App() {
     <View style={{
       backgroundColor: '#fff',
       flex: 1,
-      // flexDirection: 'row' - to make it lay out horizontally
+      justifyContent: 'center',
+      flexDirection: 'row', // main axis is row or column
+      alignItems: 'center' // secondary axis
     }}>
       <View style={{
         backgroundColor: 'dodgerblue',
         width: 100,
-        height: 100
+        height: 300
       }}>
         
       </View>
       <View style={{
         backgroundColor: 'gold',
         width: 100,
-        height: 100
+        height: 200
       }}>
         
       </View>
