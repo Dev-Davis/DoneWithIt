@@ -9,15 +9,7 @@ import {
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Button 
-        color="orange"
-        title="Click Me"
-        onPress={() => Alert.alert("My title", "My Message", [
-          { text: "Yes", onPress: () => console.log("you pressed yes") }, 
-          { text: "No", onPress: () => console.log("you pressed no") }
-        ])}
-      />
+    <SafeAreaView style={safeViewStyle}>
       <Button 
         color="blue"
         title="Click Me"
@@ -28,6 +20,8 @@ export default function App() {
     </SafeAreaView>
   );
 }
+
+const safeViewStyle = { backgroundColor: "silver" }
 
 const styles = StyleSheet.create({
   container: {
