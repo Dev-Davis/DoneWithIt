@@ -3,20 +3,24 @@ import React from 'react';
 import { 
   StyleSheet, 
   SafeAreaView, 
-  Alert,
-  Button
+  // Alert,
+  // Button,
+  View,
+  Dimensions
 } from 'react-native';
 
 export default function App() {
+  console.log(Dimensions.get("screen"));
+
   return (
     <SafeAreaView style={safeViewStyle}>
-      <Button 
-        color="blue"
-        title="Click Me"
-          onPress={() => 
-          Alert.prompt("My title", "My Message", text => console.log(text))  
-        }
-      />
+      <View style={{
+        backgroundColor: 'dodgerblue',
+        width: '50%',
+        height: 70
+      }}>
+
+      </View>
     </SafeAreaView>
   );
 }
