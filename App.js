@@ -1,34 +1,23 @@
 import React from 'react';
 import { View } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+// import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 // import WelcomeScreen from './app/screens/WelcomeScreen';
 // import ViewImageScreen from './app/screens/ViewImageScreen';
-import AppText from './app/components/AppText/AppText';
+import AppButton from './app/components/AppButton'
 
 //<Heading> My Heading</Heading>
 export default function App() {
   return (
-    <View
+    <View 
       style={{
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
       }}
-      >
-      
-      <View style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      >
-
-      <MaterialCommunityIcons name="email" size={60} color="dodgerblue" />
-
-        <AppText>I love React Native!</AppText>
-      </View>
-
-    </View>
+    >
+      <AppButton title="Login" />
+     </View>
   );
 }
+
