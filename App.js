@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 // import WelcomeScreen from './app/screens/WelcomeScreen';
 // import ViewImageScreen from './app/screens/ViewImageScreen';
-import AppButton from './app/components/AppButton'
+import AppButton from './app/components/AppButton';
 
 //<Heading> My Heading</Heading>
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
         alignItems: 'center',
       }}
     >
-      <AppButton title="Login" />
+      <AppButton title="Login" onPress={() => console.log('You pressed onPress button')}/>
      </View>
   );
 }
