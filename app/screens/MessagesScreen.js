@@ -7,7 +7,7 @@ import {
 
 import ListItem from '../components/ListItem'
 import Screen from '../components/Screen'
-import ListingDetailsScreen from './ListingDetailsScreen'
+import ListItemSeparator from '../components/ListItemSeparator'
 
 const messages = [
     {
@@ -34,14 +34,11 @@ export default function MessagesScreen() {
                 title={item.title}
                 subTitle={item.description}
                 image={item.image}
+                onPress={() => console.log("Message selected", item.id)}
             />
             )}
-            ItemListSeparatorComponent={ListingDetailsScreen}
+            ItemSeparatorComponent={ListItemSeparator}
         />
         </Screen>
     )
 }
-
-const styles = StyleSheet.create({
-    
-})
