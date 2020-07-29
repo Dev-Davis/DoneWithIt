@@ -8,6 +8,7 @@ import {
 import ListItem from '../components/ListItem'
 import Screen from '../components/Screen'
 import ListItemSeparator from '../components/ListItemSeparator'
+import ListItemDeleteAction from '../components/ListItemDeleteAction'
 
 const messages = [
     {
@@ -30,11 +31,13 @@ export default function MessagesScreen() {
         <FlatList 
             data={messages}
             keyExtractor={message => message.id.toString()}
-            renderItem={({item}) => (<ListItem 
+            renderItem={({item}) => (
+            <ListItem 
                 title={item.title}
                 subTitle={item.description}
                 image={item.image}
                 onPress={() => console.log("Message selected", item.id)}
+                renderRightActions={ListItemDeleteAction}
             />
             )}
             ItemSeparatorComponent={ListItemSeparator}
